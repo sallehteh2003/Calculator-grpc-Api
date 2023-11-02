@@ -1,0 +1,43 @@
+syntax = "proto3";
+package proto;
+
+option go_package = "./proto";
+
+service CalculatorService {
+  rpc Sum (SumRequest) returns (SumResponse);
+  rpc Subtraction (SubtractionRequest) returns (SubtractionResponse);
+  rpc Multiplication (MultiplicationRequest) returns (MultiplicationResponse);
+  rpc Division (DivisionRequest) returns (DivisionResponse);
+}
+
+message SumRequest {
+  repeated int32 a=1 [packed=true];
+}
+
+message SumResponse {
+  int32 result = 1;
+}
+
+message SubtractionRequest {
+  repeated int32 a=1 [packed=true];
+}
+
+message SubtractionResponse {
+  int32 result = 1;
+}
+message MultiplicationRequest {
+  repeated int32 a=1 [packed=true];
+}
+
+message MultiplicationResponse {
+  int32 result = 1;
+}
+
+message DivisionRequest {
+  repeated int32 a=1 [packed=true];
+}
+
+message DivisionResponse {
+  int32 result = 1;
+}
+
