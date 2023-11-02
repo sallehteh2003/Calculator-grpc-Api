@@ -1,6 +1,6 @@
 module main
 
-go 1.23
+go 1.21.3
 
 require (
 	google.golang.org/grpc v1.59.0
